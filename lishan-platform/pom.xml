@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>lishan.yu</groupId>
+    <artifactId>root</artifactId>
+    <version>all</version>
+    <packaging>pom</packaging>
+    <name>lishan.yu platform root pom</name>
+    <inceptionYear>2013</inceptionYear>
+    
+   
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>lishan.yu</groupId>
+                <artifactId>bom</artifactId>
+                <version>${lishan.yu.release}</version>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+       <project>markdown</project> 
+    </properties>
+    <profiles>
+        <profile>
+            <id>dev-0.1</id>
+            <properties>
+                <!--<env.SVN_REVISION>N/A</env.SVN_REVISION>-->
+                <!--<env.BUILD_NUMBER>4</env.BUILD_NUMBER>-->
+                <!--<env.PATCH_ID>0</env.PATCH_ID>-->
+                <env>dev</env>
+                <lishan.yu.release>0.1</lishan.yu.release>
+                <lishan.yu.version>${lishan.yu.release}-SNAPSHOT</lishan.yu.version>
+            </properties>
+        </profile>
+    </profiles>
+</project>
+
