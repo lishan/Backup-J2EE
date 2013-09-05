@@ -25,6 +25,9 @@
         <module name="web.markdown" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="web.markdown" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
