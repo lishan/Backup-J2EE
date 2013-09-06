@@ -9,8 +9,7 @@
     <packaging>pom</packaging>
     <name>lishan.yu platform root pom</name>
     <inceptionYear>2013</inceptionYear>
-    
-   
+
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
@@ -33,12 +32,14 @@
                 <artifactId>bom</artifactId>
                 <version>${lishan.yu.release}</version>
                 <type>pom</type>
+		<scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <properties>
        <project>markdown</project> 
+       <lishan.yu.release>0.1</lishan.yu.release>
     </properties>
     <profiles>
         <profile>
