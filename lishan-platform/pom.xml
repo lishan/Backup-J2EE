@@ -32,7 +32,7 @@
                 <artifactId>bom</artifactId>
                 <version>${lishan.yu.release}</version>
                 <type>pom</type>
-		<scope>import</scope>
+		        <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -44,10 +44,10 @@
     <profiles>
         <profile>
             <id>dev-0.1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
-                <!--<env.SVN_REVISION>N/A</env.SVN_REVISION>-->
-                <!--<env.BUILD_NUMBER>4</env.BUILD_NUMBER>-->
-                <!--<env.PATCH_ID>0</env.PATCH_ID>-->
                 <env>dev</env>
                 <lishan.yu.release>0.1</lishan.yu.release>
                 <lishan.yu.version>${lishan.yu.release}-SNAPSHOT</lishan.yu.version>
