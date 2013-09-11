@@ -11,8 +11,6 @@
 
 <div class="alert alert-info">
     <p>This is impetus' world</p>
-
-    <h2>add something</h2>
 </div>
 </body>
 </html>

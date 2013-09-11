@@ -7,12 +7,12 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h2>Hello <s:property value="name"/>!</h2><br/>
+<h2>Hello 123456 <s:property value="name"/>!</h2><br/>
 
 <div class="alert alert-info">
     <p>This is another page</p>
 
-    <h2>add something</h2>
+    <h2>123456</h2>
 </div>
 </body>
 </html>
