@@ -6,12 +6,10 @@
         <version>all</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>lishan.yu</groupId>
-    <artifactId>web.markdown</artifactId>
+    <artifactId>markdown</artifactId>
     <version>${lishan.yu.version}</version>
     <packaging>war</packaging>
-    <name>web.markdown Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+    <name>Markdown Maven Webapp</name>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -22,11 +20,27 @@
             <artifactId>struts2-core</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-convention-plugin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-config-browser-plugin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-extras</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-jsp</artifactId>
+        </dependency>
+        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
     </dependencies>
     <build>
-        <finalName>web.markdown</finalName>
+        <finalName>markdown</finalName>
     </build>
 </project>

@@ -10,7 +10,7 @@
 <h2>Hello <s:property value="name"/>!</h2><br/>
 
 <div class="alert alert-info">
-    <p>This is impetus' world</p>
+    <p>This is another page</p>
 
     <h2>add something</h2>
 </div>
