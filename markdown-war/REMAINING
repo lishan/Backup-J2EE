@@ -1,0 +1,12 @@
++ Project init
++ Maven support(include root and platform)
++ Script support(dev directory)
++ Struts2 support and annotation support
++ Bootstrap init
++ Git init and git ignore file
+
+---
++ Code refactor
++ Tiles learning
++ struts and struts convention config
++ Tomcat log display and synchronize display
