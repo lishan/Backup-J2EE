@@ -10,22 +10,22 @@
     </appender>
 
     <!-- specify the logging level for loggers from other libraries -->
-    <logger name="com.opensymphony">
-        <level value="DEBUG" />
-    </logger>
+    <!--<logger name="com.opensymphony">-->
+        <!--<level value="DEBUG"/>-->
+    <!--</logger>-->
 
-    <logger name="org.apache.struts2">
-        <level value="DEBUG" />
-    </logger>
+    <!--<logger name="org.apache.struts2">-->
+        <!--<level value="DEBUG"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="log4j.logger.org.apache.struts2.convention">-->
+        <!--<level value="DEBUG"/>-->
+    <!--</logger>-->
 
     <!-- for all other loggers log only info and above log messages -->
     <root>
-        <priority value="DEBUG"/>
-        <appender-ref ref="STDOUT" />
+        <priority value="INFO"/>
+        <appender-ref ref="STDOUT"/>
     </root>
-
-    <logger name="log4j.logger.org.apache.struts2.convention">
-        <level value="DEBUG"/>
-    </logger>
 
 </log4j:configuration>
