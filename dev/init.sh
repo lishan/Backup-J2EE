@@ -11,6 +11,7 @@ pushd $PROJECT_HOME
 	echo "./dev/startup.sh" >> .gitignore
 	echo "./dev/shutdown.sh" >> .gitignore
 	echo "./dev/catalina.sh" >> .gitignore
-	echo "./markdown-war/*.iml" >> .gitignore
-	echo "./lishan-platform/*.iml" >> .gitignore
+	echo "./$PROJECT_NAME-war/*.iml" >> .gitignore
+	echo "./$PLATFORM_HOME/*.iml" >> .gitignore
+	echo "./$PROJECT_NAME-war/.idea" >> .gitignore
 popd
