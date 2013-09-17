@@ -39,7 +39,7 @@ public class FirstAction extends ActionSupport{
 
     @Action(value = "/first",
             results = {
-                    @Result(location = "/test.jsp")
+                    @Result(location = "/index.jsp")
             }
     )
     public String method(){
