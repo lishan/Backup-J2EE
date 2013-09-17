@@ -14,4 +14,5 @@ pushd $PROJECT_HOME
 	echo "./$PROJECT_NAME-war/*.iml" >> .gitignore
 	echo "./$PLATFORM_HOME/*.iml" >> .gitignore
 	echo "./$PROJECT_NAME-war/.idea" >> .gitignore
+	echo "./$PROJECT_NAME-war/target" >> .gitignore
 popd
