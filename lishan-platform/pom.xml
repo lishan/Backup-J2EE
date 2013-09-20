@@ -49,8 +49,7 @@
             </activation>
             <properties>
                 <env>dev</env>
-                <lishan.yu.release>0.1</lishan.yu.release>
-                <lishan.yu.version>${lishan.yu.release}-SNAPSHOT</lishan.yu.version>
+                <lishan.yu.version>0.1-SNAPSHOT</lishan.yu.version>
             </properties>
         </profile>
     </profiles>

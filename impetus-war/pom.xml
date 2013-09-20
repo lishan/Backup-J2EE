@@ -9,7 +9,10 @@
     <artifactId>impetus</artifactId>
     <version>${lishan.yu.version}</version>
     <packaging>war</packaging>
-    <name>Markdown Maven Webapp</name>
+    <name>Impetus the World</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
