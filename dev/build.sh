@@ -2,5 +2,5 @@
 . `dirname $0`/setEnv.sh
 
 pushd $PROJECT_HOME
-	mvn clean install
+	mvn clean site
 popd

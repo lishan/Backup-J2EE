@@ -12,4 +12,5 @@ Basic goal is to compose markdown editor and template engine together.
     -- Create files EpicEditor(Support markdown)
 
 3. Tomcat is not ejb container, how we add ejb support for tomcat.(solution TomEE)
+4. JPA
 
