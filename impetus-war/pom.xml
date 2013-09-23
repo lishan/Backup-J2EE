@@ -46,6 +46,20 @@
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-tiles-plugin</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.openejb</groupId>
+            <artifactId>openejb-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>lishan.yu</groupId>
+            <artifactId>directory-api</artifactId>
+            <version>${lishan.yu.version}</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>lishan.yu</groupId>-->
+            <!--<artifactId>directory-impl</artifactId>-->
+            <!--<version>${lishan.yu.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
     <build>
         <finalName>impetus</finalName>

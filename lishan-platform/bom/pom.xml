@@ -17,6 +17,7 @@
 	<log4j.version>1.2.14</log4j.version>
 	<slf4j.version>1.7.5</slf4j.version>
 	<tiles.version>2.0.6</tiles.version>
+	<openejb.version>4.5.2</openejb.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -87,6 +88,12 @@
     		<artifactId>tiles-servlet</artifactId>
 		<version>${tiles.version}</version>
   	    </dependency>	
+	    <dependency>
+            	<groupId>org.apache.openejb</groupId>
+            	<artifactId>openejb-core</artifactId>
+            	<version>${openejb.version}</version>
+            	<scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
