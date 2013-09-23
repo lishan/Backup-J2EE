@@ -6,7 +6,7 @@
         <version>all</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>impetus</artifactId>
+    <artifactId>impetus-war</artifactId>
     <version>${lishan.yu.version}</version>
     <packaging>war</packaging>
     <name>Impetus the World</name>
@@ -55,11 +55,6 @@
             <artifactId>directory-api</artifactId>
             <version>${lishan.yu.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>lishan.yu</groupId>-->
-            <!--<artifactId>directory-impl</artifactId>-->
-            <!--<version>${lishan.yu.version}</version>-->
-        <!--</dependency>-->
     </dependencies>
     <build>
         <finalName>impetus</finalName>
