@@ -13,11 +13,14 @@
     </description>
     <properties>
         <junit.version>4.11</junit.version>
+	<javaee.version>6.0</javaee.version>
         <struts2.version>2.3.15.1</struts2.version>
 	<log4j.version>1.2.14</log4j.version>
 	<slf4j.version>1.7.5</slf4j.version>
 	<tiles.version>2.0.6</tiles.version>
 	<openejb.version>4.5.2</openejb.version>
+	<openjpa.version>2.2.2</openjpa.version>
+	<mysql.version>5.0.8</mysql.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -27,6 +30,12 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+	    <dependency>
+		<groupId>javax</groupId>
+		<artifactId>javaee-api</artifactId>
+		<version>${javaee.version}</version>
+		<scope>provided</scope>
+	    </dependency>
             <dependency>
                 <groupId>org.apache.struts</groupId>
                 <artifactId>struts2-core</artifactId>
@@ -94,6 +103,18 @@
             	<version>${openejb.version}</version>
             	<scope>provided</scope>
             </dependency>
+	    <dependency>
+		<groupId>org.apache.openjpa</groupId>
+		<artifactId>openjpa</artifactId>
+		<version>${openjpa.version}</version>
+            	<scope>provided</scope>
+	    </dependency>
+	    <dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql.version}</version>
+		<scope>runtime</scope>
+	    </dependency>
         </dependencies>
     </dependencyManagement>
 

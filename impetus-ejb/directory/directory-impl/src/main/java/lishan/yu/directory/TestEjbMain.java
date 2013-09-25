@@ -2,10 +2,12 @@ package lishan.yu.directory;
 
 import lishan.yu.directory.api.TestEjbLocal;
 import lishan.yu.directory.api.TestEjbRemote;
+import lishan.yu.element.TestElement;
 import org.apache.log4j.Logger;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.persistence.*;
 
 /**
  * @author fred
@@ -18,6 +20,14 @@ public class TestEjbMain implements TestEjbLocal,TestEjbRemote {
 
     @Override
     public String hello() {
+        EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("test");
+        EntityManager entityManager = managerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        TestElement element = new TestElement();
+        element.setId(1);
+        entityManager.persist(element);
+        transaction.commit();
         System.out.println("Hello everyone");
         log.info("Directory ejb calls, hello everyone");
         return "success";
