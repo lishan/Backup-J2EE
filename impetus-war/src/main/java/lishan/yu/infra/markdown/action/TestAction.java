@@ -1,10 +1,13 @@
 package lishan.yu.infra.markdown.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import lishan.yu.directory.api.TestEjbLocal;
 import lishan.yu.directory.api.TestEjbRemote;
 import org.apache.log4j.Logger;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
+
+import javax.ejb.EJB;
 import javax.naming.Context;
 
 import javax.naming.InitialContext;

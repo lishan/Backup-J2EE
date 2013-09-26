@@ -3,6 +3,7 @@ package lishan.yu.element;
 import org.apache.log4j.Logger;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author fred
@@ -10,13 +11,19 @@ import javax.persistence.*;
  *         Time: 11:13 AM
  */
 @Entity
-@Table(name = "EMPLOYEE_INFO")
-public class TestElement {
+@Table(name = "test")
+public class TestElement implements Serializable{
     private static final Logger log = Logger.getLogger(TestElement.class);
 
     @Id
-    @Column(name = "INFO_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "age")
+    private int age;
 
     @PostLoad
     public void setUp(){
@@ -29,5 +36,21 @@ public class TestElement {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

@@ -20,12 +20,13 @@ public class TestEjbMain implements TestEjbLocal,TestEjbRemote {
 
     @Override
     public String hello() {
-        EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("test");
-        EntityManager entityManager = managerFactory.createEntityManager();
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("tests");
+        EntityManager entityManager = factory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         TestElement element = new TestElement();
-        element.setId(1);
+        element.setName("Xuchuyi");
+        element.setAge(25);
         entityManager.persist(element);
         transaction.commit();
         System.out.println("Hello everyone");
