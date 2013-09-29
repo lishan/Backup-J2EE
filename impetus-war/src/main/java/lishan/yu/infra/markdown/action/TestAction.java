@@ -1,6 +1,7 @@
 package lishan.yu.infra.markdown.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import lishan.yu.db.DirectoryElement;
 import lishan.yu.directory.api.TestEjbLocal;
 import lishan.yu.directory.api.TestEjbRemote;
 import org.apache.log4j.Logger;
@@ -11,6 +12,9 @@ import javax.ejb.EJB;
 import javax.naming.Context;
 
 import javax.naming.InitialContext;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.rmi.PortableRemoteObject;
 import java.util.Properties;
 
@@ -42,6 +46,25 @@ public class TestAction extends ActionSupport{
             log.info(result);
             System.out.println(result);
             return SUCCESS;
+    }
+
+    @Action(value = "method",
+            results = {
+                    @Result(location = "/markdown/index.jsp")
+            }
+
+    )
+    public String method(){
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("dic");
+        EntityManager entityManager = factory.createEntityManager();
+        entityManager.getTransaction().begin();
+        DirectoryElement element = new DirectoryElement();
+        element.setName("tester");
+        entityManager.persist(element);
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        factory.close();
+        return SUCCESS;
     }
 
     public String getName() {

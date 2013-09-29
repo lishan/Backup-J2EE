@@ -22,6 +22,7 @@
         <openjpa.version>2.2.2</openjpa.version>
         <mysql.version>5.0.8</mysql.version>
         <hsqldb.version>1.8.0.10</hsqldb.version>
+        <hibernate.version>4.3.0.Beta4</hibernate.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -121,6 +122,26 @@
                 <artifactId>hsqldb</artifactId>
                 <version>${hsqldb.version}</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-envers</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-c3p0</artifactId>
+                <version>${hibernate.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
