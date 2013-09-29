@@ -13,14 +13,15 @@
     </description>
     <properties>
         <junit.version>4.11</junit.version>
-	<javaee.version>6.0</javaee.version>
+        <javaee.version>6.0</javaee.version>
         <struts2.version>2.3.15.1</struts2.version>
-	<log4j.version>1.2.14</log4j.version>
-	<slf4j.version>1.7.5</slf4j.version>
-	<tiles.version>2.0.6</tiles.version>
-	<openejb.version>4.5.2</openejb.version>
-	<openjpa.version>2.2.2</openjpa.version>
-	<mysql.version>5.0.8</mysql.version>
+        <log4j.version>1.2.14</log4j.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <tiles.version>2.0.6</tiles.version>
+        <openejb.version>4.5.2</openejb.version>
+        <openjpa.version>2.2.2</openjpa.version>
+        <mysql.version>5.0.8</mysql.version>
+        <hsqldb.version>1.8.0.10</hsqldb.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -30,91 +31,97 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
-	    <dependency>
-		<groupId>javax</groupId>
-		<artifactId>javaee-api</artifactId>
-		<version>${javaee.version}</version>
-		<scope>provided</scope>
-	    </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee.version}</version>
+                <scope>provided</scope>
+            </dependency>
             <dependency>
                 <groupId>org.apache.struts</groupId>
                 <artifactId>struts2-core</artifactId>
                 <version>${struts2.version}</version>
             </dependency>
-	    <dependency>
-		<groupId>org.apache.struts</groupId>
-		<artifactId>struts2-convention-plugin</artifactId>
-		<version>${struts2.version}</version>
-	    </dependency>
-	    <dependency>
-		<groupId>org.apache.struts</groupId>
-		<artifactId>struts2-config-browser-plugin</artifactId>
-		<version>${struts2.version}</version>
-	    </dependency>
-	    <dependency>
-            	<groupId>log4j</groupId>
-            	<artifactId>log4j</artifactId>
-		<version>${log4j.version}</version>
+            <dependency>
+                <groupId>org.apache.struts</groupId>
+                <artifactId>struts2-convention-plugin</artifactId>
+                <version>${struts2.version}</version>
             </dependency>
-	    <dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>${slf4j.version}</version>
-	    </dependency>
-	    <dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-log4j12</artifactId>
-		<version>${slf4j.version}</version>
-	    </dependency>
-	    <dependency>
-    		<groupId>org.apache.tiles</groupId>
-		<artifactId>tiles-extras</artifactId>
-		<version>${tiles.version}</version>
-		<exclusions>
-			<exclusion>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-			</exclusion>
-		</exclusions>
-	    </dependency>
-	    <dependency>
-		<groupId>org.apache.tiles</groupId>
-    		<artifactId>tiles-jsp</artifactId>
-		<version>${tiles.version}</version>
-	    </dependency>	
-	    <dependency>
-		<groupId>org.apache.tiles</groupId>
-		<artifactId>tiles-api</artifactId>
-		<version>${tiles.version}</version>
-	    </dependency>
-	    <dependency>
-		<groupId>org.apache.struts</groupId>
-		<artifactId>struts2-tiles-plugin</artifactId>		
-		<version>${struts2.version}</version>
-	    </dependency>
-	    <dependency>
-		<groupId>org.apache.tiles</groupId>
-    		<artifactId>tiles-servlet</artifactId>
-		<version>${tiles.version}</version>
-  	    </dependency>	
-	    <dependency>
-            	<groupId>org.apache.openejb</groupId>
-            	<artifactId>openejb-core</artifactId>
-            	<version>${openejb.version}</version>
-            	<scope>provided</scope>
+            <dependency>
+                <groupId>org.apache.struts</groupId>
+                <artifactId>struts2-config-browser-plugin</artifactId>
+                <version>${struts2.version}</version>
             </dependency>
-	    <dependency>
-		<groupId>org.apache.openjpa</groupId>
-		<artifactId>openjpa</artifactId>
-		<version>${openjpa.version}</version>
-            	<scope>provided</scope>
-	    </dependency>
-	    <dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-		<version>${mysql.version}</version>
-		<scope>runtime</scope>
-	    </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-extras</artifactId>
+                <version>${tiles.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>jcl-over-slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-jsp</artifactId>
+                <version>${tiles.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-api</artifactId>
+                <version>${tiles.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.struts</groupId>
+                <artifactId>struts2-tiles-plugin</artifactId>
+                <version>${struts2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-servlet</artifactId>
+                <version>${tiles.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.openejb</groupId>
+                <artifactId>openejb-core</artifactId>
+                <version>${openejb.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa</artifactId>
+                <version>${openjpa.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>${hsqldb.version}</version>
+                <scope>runtime</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -17,5 +17,9 @@
         <module>directory/directory-api</module>
         <module>directory/directory-impl</module>
     </modules>
+    <description>
+        This directory project is based on openejb and JPA to implement ejb project, I have done
+        research on create database on hsqldb. In war project, it just depends on api project only.
+    </description>
 </project>
 
