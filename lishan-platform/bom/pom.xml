@@ -13,6 +13,7 @@
     </description>
     <properties>
         <junit.version>4.11</junit.version>
+        <commons.lang.version>3.1</commons.lang.version>
         <javaee.version>6.0</javaee.version>
         <struts2.version>2.3.15.1</struts2.version>
         <log4j.version>1.2.14</log4j.version>
@@ -22,7 +23,7 @@
         <openjpa.version>2.2.2</openjpa.version>
         <mysql.version>5.0.8</mysql.version>
         <hsqldb.version>1.8.0.10</hsqldb.version>
-        <hibernate.version>4.3.0.Beta4</hibernate.version>
+        <hibernate.version>4.2.6.Final</hibernate.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -31,6 +32,11 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax</groupId>
