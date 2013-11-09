@@ -17,6 +17,5 @@
         <module>impetus-war</module>
         <module>impetus-ejb</module>
         <module>myfaces-war</module>
-    <module>myfaces-war</module>
   </modules>
 </project>
