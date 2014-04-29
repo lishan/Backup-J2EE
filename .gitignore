@@ -2,3 +2,7 @@
 .idea/
 *dependency-reduced-pom.xml
 *target/
+*startup.sh
+*shutdown.sh
+*catalina.sh
+*init.sh
