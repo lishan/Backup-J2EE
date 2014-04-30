@@ -1,0 +1,11 @@
+{
+  "name": "impetus",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "uikit": "~2.6.0",
+    "bootstrap": "~2.3.0",
+    "foundation": "~5.2.2"
+  },
+  "devDependencies": {}
+}

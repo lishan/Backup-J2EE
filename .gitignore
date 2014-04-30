@@ -6,3 +6,5 @@
 *shutdown.sh
 *catalina.sh
 *init.sh
+*bower_components
+/dev/data
